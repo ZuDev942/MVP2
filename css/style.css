@@ -16,18 +16,22 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
 .page {
   position: relative;
   max-width: 100%;
-}
-
-.text-hover a {
-  color: #fff;
-  text-decoration: none;
-}
-.text-hover a:hover {
-  color: #ffc600;
-  transition: all 0.3s ease-in;
 }
 
 .header .container-fluid {
@@ -737,7 +741,7 @@ body {
 .about {
   padding: 10rem 2rem;
   position: relative;
-  background-image: url("/images/bg-about.jpg");
+  background-image: url("/MVP2/images/bg-about.jpg");
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -882,7 +886,7 @@ body {
 
 .courses {
   width: 100%;
-  background-image: url("/images/featured_courses_background.png");
+  background-image: url("/MVP2/images/featured_courses_background.png");
   background-size: cover;
   background-position: center center;
   background-color: #f9f9f9;
@@ -1059,7 +1063,7 @@ body {
 
 .faciliti {
   position: relative;
-  background-image: url("/images/edu.jpg");
+  background-image: url("/MVP2/images/edu.jpg");
   background-size: cover;
   background-position: center center;
   background-color: #ccd7e9;
@@ -1155,11 +1159,11 @@ body {
   display: none;
   position: fixed;
   z-index: 999;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -1183,6 +1187,11 @@ body {
 .faciliti__video--close:hover {
   color: #8a8a8a;
 }
+.faciliti__video iframe {
+  overflow: hidden;
+  width: 50vw;
+  height: calc(50vw/1.77);
+}
 @media (max-width: 767.98px) {
   .faciliti::before {
     width: 100%;
@@ -1194,10 +1203,24 @@ body {
   .faciliti__item {
     flex-direction: column;
   }
+  .faciliti__video {
+    margin: 50% auto;
+  }
+  .faciliti__video--close {
+    top: -20%;
+  }
+  .faciliti__video iframe {
+    width: 80vw;
+    height: calc(80vw/1.77);
+  }
 }
 @media (max-width: 992px) {
   .faciliti__wrapper {
     padding: 4rem 2rem;
+  }
+  .faciliti__video iframe {
+    width: 70vw;
+    height: calc(70vw/1.77);
   }
 }
 
@@ -1306,7 +1329,7 @@ body {
 
 .feedback {
   position: relative;
-  background-image: url("/images/feedback-bg.jpg");
+  background-image: url("/MVP2//images/feedback-bg.jpg");
   background-size: cover;
   background-position: center center;
   color: #fff;
@@ -1427,7 +1450,7 @@ body {
 }
 
 .book {
-  background-image: url("/images/featured_courses_background.png");
+  background-image: url("/MVP2/images/featured_courses_background.png");
   background-size: cover;
   background-position: center center;
   background-color: #f9f9f9;
@@ -1595,7 +1618,7 @@ body {
 }
 
 .logo {
-  background-image: url("/images/featured_courses_background.png");
+  background-image: url("/MVP2/images/featured_courses_background.png");
   background-size: cover;
   background-position: center center;
   background-color: #f9f9f9;

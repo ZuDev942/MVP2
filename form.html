@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Slide JS -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 
 <body>
@@ -58,7 +58,7 @@
             <div class="header-sticky">
                 <nav class="header-menu container-fluid">
                     <div class="header-menu__logo">
-                        <a href="index.html"><img src="images/header-logo.png" alt=""></a>
+                        <a href="index.html"><img src="/MVP2/images/header-logo.png" alt=""></a>
                     </div>
                     <div class="header-menu__right">
                         <div class="header-menu__bars" onclick="hideBars()"><i class="fas fa-bars"></i></div>
@@ -160,7 +160,7 @@
         </section>
         <section class="form">
             <div class="container-fluid">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-sm-6 d-flex flex-column mb-5">
                         <label for="firstName" class="font-weight-bold mb-4">First Name</label>
                         <input type="text" placeholder="First Name" id="firstName">
@@ -169,7 +169,7 @@
                     <div class="col-sm-6 d-flex flex-column mb-5">
                         <label for="lastName" class="font-weight-bold mb-4">Last Name</label>
                         <input type="text" placeholder="Last Name" id="lastName" tabindex="-1">
-                        <div  class="form__check" id="lastNameValidate"></div>
+                        <div class="form__check" id="lastNameValidate"></div>
                     </div>
                 </div>
                 <div class="row">
@@ -200,7 +200,52 @@
                     <div class="col-12 d-flex justify-content-end">
                         <button id="btnSubmit" type="submit" class="box__btn"><a>Register</a></button>
                     </div>
-                </div>
+                </div> -->
+
+                <form class="requires-validation row" novalidate>
+                    <div class="col-md-6 py-2">
+                        <label for="firstName" class="form-label font-weight-bold mb-4">First name</label>
+                        <input class="form-control" type="text" placeholder="First name" id="firstName" required>
+                        <div class="valid-feedback pt-2">Firstname field is valid!</div>
+                        <div class="invalid-feedback pt-2">Firstname field cannot be blank!</div>
+                    </div>
+                    <div class="col-md-6 py-2">
+                        <label for="lastName" class="form-label font-weight-bold mb-4 ">Last name</label>
+                        <input class="form-control" type="text" placeholder="Last Name" id="lastName" required>
+                        <div class="valid-feedback pt-2">Lastname field is valid!</div>
+                        <div class="invalid-feedback pt-2">Lastname field cannot be blank!</div>
+                    </div>
+                    <div class="col-md-6 py-2">
+                        <label for="userName" class="form-label font-weight-bold mb-4">User name</label>
+                        <input class="form-control" type="text" placeholder="User Name" id="userName" required>
+                        <!-- <div class="valid-feedback">Username field is valid!</div> -->
+                        <div class="invalid-feedback">Username field cannot be blank!</div>
+                    </div>
+                    <div class="col-md-6 py-2">
+                        <label for="email" class="form-label font-weight-bold mb-4">E-mail</label>
+                        <input class="form-control" type="text" placeholder="E-mail" id="email" required>
+                        <div class="valid-feedback">Email field is valid!</div>
+                        <div class="invalid-feedback">Email field cannot be blank!</div>
+                    </div>
+                    <div class="col-md-6 py-2">
+                        <label for="password" class="form-label font-weight-bold mb-4">Password</label>
+                        <input class="form-control" type="text" placeholder="Password" id="password" required>
+                        <div class="valid-feedback">Password field is valid!</div>
+                        <div class="invalid-feedback">Password field is required!</div>
+                    </div>
+                    <div class="col-md-6 py-2">
+                        <label for="passwordConfirm" class="form-label font-weight-bold mb-4">Password
+                            Confirmation</label>
+                        <input class="form-control" type="text" placeholder="Password Confirmation" id="passwordConfirm"
+                            required>
+                        <div class="valid-feedback">Password confirmation field is valid!</div>
+                        <div class="invalid-feedback">Password Confirmation field is required</div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-end form-button mt-3">
+                        <button id="btnSubmit" type="submit"
+                            class="btn btn-primary btn-lg p-4 font-weight-normal">Register</button>
+                    </div>
+                </form>
             </div>
         </section>
         <!-- ==== Form ==== -->
@@ -210,7 +255,7 @@
                     <div class="row">
                         <div class="footer__social col-lg-4 col-md-6">
                             <div class="footer__logo">
-                                <img src="/images/white-logo.png" alt="">
+                                <img src="/MVP2/images/white-logo.png" alt="">
                             </div>
                             <p class="footer__desc">
                                 Edubin perfect for online courses and other institutes. It’s a complete solution with
@@ -279,10 +324,6 @@
                 </div>
             </div>
         </footer>
-        <!-- ==== Back to Top ==== -->
-        <button class="back--top" type="button">
-            <i class="fas fa-chevron-up"></i>
-        </button>
     </main>
 </body>
 <script>

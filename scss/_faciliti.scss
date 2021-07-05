@@ -1,0 +1,127 @@
+.faciliti {
+    position: relative;
+    background-image: url('/images/edu.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-color: #ccd7e9;
+    .container-fluid{
+        padding: 0 2rem;
+        max-width: 100%;
+        width: 117rem;
+    }
+    &__overview {
+        @include flex(center, center);
+    }
+    &__heading {
+        @include font(3.6rem, 700);
+        padding-bottom: 3.5rem;
+    }
+    &__wrapper {
+        padding: 8rem 0 8rem 8rem;
+    }
+    &__play {
+        cursor: pointer;
+        @include size(6rem);
+        background-color: $secondary-color;
+        border-radius: 50%;
+        margin: 2rem auto;
+        position: relative;
+        i {
+            font-size: 3rem;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include size(100%);
+            border-radius: inherit;
+            background-color: inherit;
+            animation: fadePlay 2s forwards infinite linear;
+        }
+        @keyframes fadePlay {
+            to {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+    }
+    &__item {
+        display: flex;
+        margin-bottom: 4rem;
+        img {
+            @include size(20%, fit-content);
+            margin-right: 2rem;
+        }
+    }
+    &__box {
+        h4 {
+            @include font(2.4rem, 700);
+            margin-bottom: 2rem;
+        }
+        p {
+            @include font(1.6rem);
+        }
+    }
+    &::before{
+        position: absolute;
+        content: '';
+        @include size(50%, 100%);
+        background-color: $primary-color;
+        opacity: 0.9;
+        right: 0;
+    }
+    &__popup{
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        @include size(100%);
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    &__video{
+        position: relative;
+        background-color: #fefefe;
+        margin: 15% auto;
+        border: 1px solid #888;
+        width: max-content;
+        &--close {
+            position: absolute;
+            right: 0;
+            top: -15%;
+            cursor: pointer;
+            color: #fff;
+            float: right;
+            font-size: 2.8rem;
+            font-weight: bold;
+            &:hover{
+                color: $gray-color;
+            }
+        }
+    }
+    // ====>> Responsive
+    @media (max-width: 767.98px) {
+        &::before{
+            @include size(100%);    
+        }
+        &__wrapper{
+            padding: 4rem 0rem;
+        }
+        &__item{
+            flex-direction: column;
+        }
+    }
+    @media (max-width: 992px) {
+        &__wrapper{
+            padding: 4rem 2rem;
+        }
+    }
+}

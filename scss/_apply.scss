@@ -1,0 +1,57 @@
+.apply{
+    color: #fff;
+    .container-fluid{
+        padding: 10rem 4rem;
+        max-width: 100%;
+        width: 117rem;
+    }
+    &__box{
+        padding: 4rem;
+    }
+    &__column{
+        background-color: $primary-color;
+        margin-top: 2rem;
+        &:nth-child(2){
+            background-color: #092e56;
+        }
+    }
+    &__title{
+        @include font(3rem, 700);
+        padding-bottom: 3rem;
+    }
+    &__desc{
+        @include font(1.6rem, 400);
+        line-height: 2.6rem;
+        padding-bottom: 3rem;
+    }
+    &__btn{
+        cursor: pointer;
+        @include size(max-content);
+        background-color: $secondary-color;
+        padding: 1.5rem 3rem;
+        border: 2px solid $secondary-color;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease-in-out;
+        a{
+            @include font(1.5rem, 600);
+            color: initial;
+        }
+        &:hover{
+            background-color: initial;
+            border: 2px solid #fff;
+            a{color: #fff;}
+        }
+
+    }
+    @media (max-width: 768px) {
+        .container-fluid{
+            padding: 5rem 3rem;
+        }
+        &__column{
+            margin-bottom: 2rem;
+        }
+        &__box{
+            padding: 4rem 1rem;
+        }
+    }
+}

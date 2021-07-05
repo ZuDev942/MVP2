@@ -1,0 +1,32 @@
+html {
+    font-size: 62.5%;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-font;
+}
+.page{
+    position: relative;
+    max-width: 100%;
+}
+.text-hover {
+    a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            color: $secondary-color;
+            transition: all .3s ease-in;
+        }
+    }
+}

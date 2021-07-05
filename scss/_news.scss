@@ -1,0 +1,47 @@
+.news{
+    .container-fluid{
+        padding: 10rem 2rem;
+        max-width: 100%;
+        width: 117rem;
+    }
+    &__column{
+        padding: 1rem;
+    }
+    &__header{
+        overflow: hidden;
+        position: relative;
+        height: 20rem;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include size(100%);
+            object-fit: cover;
+            transition: all 0.4s ease-in;
+        }
+        &:hover img{
+            transition: all 0.4s ease-in;
+            transform: scale(1.1);
+        }
+    }
+    &__calender{
+        padding-top: 2.5rem;
+        span{
+            @include font(1.4rem, 500, $gray-color);
+            padding-right: 1.2rem;
+            i{
+                color: $secondary-color;
+                padding-right: 0.3rem;
+            }
+        }
+    }
+    &__title{
+        cursor: pointer;
+        @include font(2.4rem, 700, $primary-color);
+        padding: 2rem 0;
+    }
+    &__desc{
+        @include font(1.6rem, 400, #505050);
+        padding-bottom: 1rem;
+    }
+}

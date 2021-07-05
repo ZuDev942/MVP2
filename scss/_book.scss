@@ -1,0 +1,94 @@
+.book{
+    background-image: url('/images/featured_courses_background.png');
+    background-size: cover;
+    background-position: center center;
+    background-color: #f9f9f9;
+    .container-fluid{
+        padding: 10rem 2rem;
+        max-width: 100%;
+        width: 117rem;
+    }
+    &__header{
+        @include flex(center, space-between, wrap);
+    }
+    &__list{
+        @include flex(flex-start, space-between, wrap)
+    }
+    &__item{
+        cursor: pointer;
+        position: relative;
+        max-width: 22%;
+        margin: 3rem 0 0 0;
+        &:hover .book__cart{
+            transition: all 0.5s ease-in-out;
+            opacity: 0.9;
+        }
+        &:hover a{
+            transition: all 0.5s ease;
+            transform: translateY(0);
+        }
+    }
+    &__img{
+        position: relative;
+        max-width: 100%;
+        background-color: #edf0f2;
+        img{
+            max-width: 100%;
+            transform: scale(0.7);
+        }
+    }
+    &__cart{
+        position: absolute;
+        background-color: #07294d;
+        top: 0;
+        opacity: 0;
+        @include size(100%);
+        @include flex(center, center);
+        a{
+            position: relative;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: $secondary-color;
+            border: 1px solid $secondary-color;
+            background-color: initial;
+            margin-right: 1rem;
+            @include size(4rem);
+            @include flex(center, center);
+            transform: translateY(120%);
+            &:hover{
+                color: $primary-color;
+                background-color: $secondary-color;
+            }
+        }
+    }
+  
+    &__title, &__price{
+        text-align: center;
+        cursor: pointer;
+    }
+    &__title{
+        padding-top: 2rem;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $primary-color;
+    }
+    &__price{
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    @media (max-width: 720px) {
+        &__item{
+            max-width: 45%;
+        }
+    }
+    @media (max-width: 576px) {
+        &__box{
+            margin: 2rem 0;
+        }
+    }
+    @media (max-width: 375px) {
+        &__item{
+            max-width: 100%;
+        }
+    }
+}

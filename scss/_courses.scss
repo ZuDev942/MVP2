@@ -1,0 +1,152 @@
+.courses {
+    width: 100%;
+    background-image: url('/images/featured_courses_background.png');
+    background-size: cover;
+    background-position: center center;
+    background-color: #f9f9f9;
+    .container-fluid{
+        padding: 10rem 2rem;
+        max-width: 100%;
+        width: 117rem;
+    }
+    &__slide{
+        position: relative;
+        padding-top: 7rem;
+    }
+    &__column{
+        padding: 0 1.3rem;
+    }
+    &__btn {
+        position: absolute;
+        cursor: pointer;
+        @include size(4rem);
+        border: 2px solid #aaaaaa;
+        border-radius: 0.3rem;
+        top: 5%;
+        right: 0;
+        transform: translateY(-50%);
+        transition: all 0.4s ease-in-out;
+        &--next{
+            right: 6rem;
+        }
+        i {
+            font-size: 2rem;
+        }
+        &:hover {
+            background-color: $secondary-color;
+            border-color: $secondary-color;
+        }
+        &:focus{
+            outline: 0;
+        }
+    }
+    &__header {
+        height: 22rem;
+        overflow: hidden;
+        position: relative;
+        img {
+            max-width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover img {
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+    &__tutor {
+        position: absolute;
+        cursor: pointer;
+        left: 0;
+        top: 1.3rem;
+        width: 100%;
+        padding: 0 1.3rem;
+        &--level {
+            @include font(1.3rem, 600);
+            padding: 0.5rem 1rem;
+            background-color: $primary-color;
+        }
+        &--wishlist {
+            float: right;
+            padding: 0.5rem;
+            background-color: #fff;
+            border-radius: 0.2rem;
+            i {
+                font-size: 1.6rem;
+                color: $primary-color;
+            }
+            &:hover {
+                transition: all 0.3s ease-in-out;
+                background-color: $primary-color;
+                i {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+    &__content {
+        padding: 2rem;
+        background-color: #fff;
+    }
+    &__rating {
+        i{
+            font-size: 1.4rem;
+            color: $secondary-color;
+            padding-right: 0.5rem;
+        }
+        &--number {
+            @include font(1.3rem);
+            color: $text-color;
+        }
+    }
+    &__name {
+        a {
+            @include font(2rem, 600, $primary-color);
+            &:hover {
+                color: $secondary-color;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+    &__enroll{
+        padding: 2rem 0;
+        @include font(1.6rem, 400, $text-color);
+        span, i{
+            padding-right: 1rem;
+        }
+    }
+    &__footer{
+        border-top: 1px solid $text-color;
+        background-color: #fff;
+        padding: 1rem 3rem;
+    }
+    &__price{
+        @include font(1.6rem, 600);
+        color: $primary-color;
+    }
+    &__add{
+        float: right;
+        cursor: pointer;
+        @include font(1.4rem, 600);
+        color: $text-color;
+        i{
+            color: $secondary-color;
+            padding-right: 0.5rem;
+        }
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+    &__author{
+        @include font(1.6rem, 400,  $gray-color);
+        @include flex(flex-start, flex-start);
+        &--avatar{
+            @include size(2.5rem);
+            margin-right: 1rem;
+        }
+        span{
+            @include font(1.6rem, 600,  $primary-color);
+        }
+    }
+}
+

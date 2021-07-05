@@ -1,0 +1,22 @@
+@mixin flex($align: flex-start,
+  $justify: flex-start,
+  $wrap: nowrap,
+  $dir: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+  flex-direction: $dir;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($fontsize, $fontWeight: 400, $color: #fff) {
+  font-family: 'Roboto', sans-serif;
+  font-size: $fontsize;
+  font-weight: $fontWeight;
+  color: $color;
+}

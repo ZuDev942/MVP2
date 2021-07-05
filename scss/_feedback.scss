@@ -1,0 +1,103 @@
+.feedback{
+    position: relative;
+    background-image: url('/images/feedback-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    .container-fluid{
+        padding: 10rem 2rem;
+        max-width: 100%;
+        width: 117rem;
+    }
+    &::before{
+        position: absolute;
+        content: '';
+        @include size(100%);
+        background-color: $primary-color;
+        opacity: 0.9;
+    }
+    .box{
+        &__caption, &__heading{
+            color: #fff;
+            &::before{
+                background-color: #fff;
+            }
+        }
+    }
+    &__list{
+        width: 100%;
+        padding: 4rem 0;
+    }
+    &__item{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 3rem 0;
+    }
+    &__avatar{
+        margin-right: 5rem;
+        position: relative;
+        img{
+            @include size(9rem);
+        }
+        &--quote{
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            @include size(4rem);
+            background-color: $secondary-color;
+            border-radius: 50%;
+            @include flex(center, center);
+            i{
+                color: $primary-color;
+                font-size: 1.8rem;
+            }
+        }
+    }
+   
+    &__box{
+        padding-right: 2rem;
+        
+    }
+    &__name{
+        @include font(1.8rem, 700);
+    }
+    &__comment, &__degree{
+        @include font(1.6rem);
+    }
+    @media (max-width: 576px) {
+        &__item{
+           display: flex;
+           flex-direction: column;
+        }
+        &__avatar{
+            @include size(9rem);
+            margin-bottom: 4rem;
+        }
+        &__box{
+            padding-right: 0;
+        }
+    }
+    @media (max-width: 720px) {
+        &__comment{
+            width: 100%;
+        }
+    }
+}
+.slick-dots{
+    @include flex(center, center, nowrap);
+}
+.slick-dots li button{
+    color: transparent;
+    background-color: #fff;
+    @include size(1.2rem);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    margin: 1rem;
+}
+.slick-dots li.slick-active button {
+    background-color: $secondary-color;
+}

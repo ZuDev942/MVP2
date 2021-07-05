@@ -1,0 +1,219 @@
+.slideshow {
+    position: relative;
+    max-width: 100%;
+    &__heading {
+        @include font(6rem, 600);
+        animation: headingEffect 3s;
+    }
+    &__desc {
+        @include font(1.8rem);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        animation: descEffect 3s;
+    }
+    &__btn{
+        animation: btnEffect 3s;
+    }
+    &__img {
+        display: none;
+        @include size(100%, 82rem);
+        background-size: cover;
+        background-position: center center;
+        .container-fluid{
+            padding: 17rem 10rem;
+        }
+    }
+    &__prev,
+    &__next {
+        opacity: 0;
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        @include font(1.8rem, 500);
+        @include size(4.5rem);
+        @include flex(center, center);
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background-color: inherit;
+        transition: all .3s ease;
+        &:hover {
+            background-color: $secondary-color;
+            border-color: $secondary-color;
+            color: inherit;
+        }
+    }
+    &__next {
+        right: 2.5rem;
+        transform: translateX(40%);
+    }
+    &__prev {
+        left: 2.5rem;
+        transform: translateX(-40%);
+    }
+    &:hover &__prev,
+    &:hover &__next{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    // Responsive ======>
+    @media (max-width: 575.98px) { 
+        &__prev, &__next{
+            display: none;
+        }
+    }
+    @media (max-width: 767.98px) { 
+        &__heading{
+            @include font(4.2rem, bold);
+        }
+    }
+    @media (max-width: 1199.98px) {
+        .container-fluid{
+            padding: 17rem 2rem;
+        }
+    }  
+    // Key Frame ======>
+    @keyframes headingEffect {
+        from{
+            opacity: 0;
+            transform: translateX(-5%);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes descEffect {
+        from{
+            opacity: 0;
+            transform: translateX(5%);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes btnEffect {
+        from{
+            opacity: 0;
+            transform: translateY(5rem);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0rem);
+        }
+    }
+}
+// ==== Platform >>
+.platform {
+    color: #fff;
+    margin-top: -15rem;
+    padding: 0 2rem;
+    .container-fluid{
+        padding: 7rem;
+        max-width: 100%;
+        width: 117rem;
+    }
+    &__container{
+        border-radius: 1rem;
+        background-color: $primary-color;
+    }
+    &__heading{
+        h2{
+            @include font(3.6rem, bold);
+            padding-right: 9rem;
+        }
+    }
+    &__list{
+        position: relative;
+    }
+    &__item{
+        max-width: 17rem;
+        height: 17rem;
+        margin: 0 auto;
+        border-radius: 0.5rem;
+        @include flex(center, center, nowrap, column);
+        img{
+            max-width: 50%;
+        }
+        span{
+            padding-top: 1rem;
+            @include font(1.8rem, 700);
+        }
+    }
+    &--lightblue{
+        background-color: $light-blue--color;
+    }
+    &--violet{
+        background-color: $violet--color;
+    }
+    &--limon{
+        background-color: $limon--color;
+    }
+    &--pinkred{
+        background-color: $pink-red--color;
+    }
+    &--avocado{
+        background-color: $avocado--color;
+    }
+    &--next, &--prev{
+        position: absolute;
+        @include size(4rem);
+        @include flex(center, center);
+        @include font(1.8rem);
+        color: #fff;
+        outline: none;
+        border: 0;
+        border-radius: 50%;
+        background-color: #557495;
+        z-index: 99;
+        top: 38%;
+        &:focus{
+            outline: none;
+        }
+    }
+    &--next{
+        left: -4rem;
+    }
+    &--prev{
+        right: -4rem;
+    }
+    @media (max-width: 1199.98px) { 
+        
+    }
+    @media (max-width: 992px) {
+        .container-fluid{
+            padding: 3rem 7rem;
+        }
+        &__heading{
+            max-width: 100%;
+            text-align: center;
+            h2{
+                @include font(2.6rem, 700);
+                padding-bottom: 4rem;
+                padding-right: 0;
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        &__heading{
+            h2{
+                @include font(2.5rem, 700);
+            }
+        }
+        &__item{
+            margin: 0 auto;
+        }
+        &--next{
+            left: -4rem;
+        }
+        &--prev{
+            right: -4rem;
+        }
+    }
+    @media only screen and (max-width: 480px) {
+        &__item{
+            margin: 0 auto;
+        }
+    }
+}

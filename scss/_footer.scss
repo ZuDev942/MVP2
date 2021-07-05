@@ -1,0 +1,110 @@
+.footer{
+    color: #fff;
+    .container-fluid{
+        max-width: 100%;
+        width: 117rem;
+    }
+    &-top{
+        padding: 7rem 2rem;
+        background-color: #07294d;
+    }
+    &__logo{
+        margin-top: -1rem;
+        width: 18rem;
+        img{
+            max-width: 100%;
+        }
+    }
+    &__desc{
+        @include font(1.6rem, 400);
+        padding-top: 2.5rem;
+    }
+    &__icon{
+        display: inline-flex;
+        margin-top: 2rem;
+        li{
+            cursor: pointer;
+            margin-right: 1.5rem;
+            background-color: #021d3a;
+            border-radius: 50%;
+            @include size(4rem);
+            @include font(1.5rem);
+            @include flex(center, center);
+            &:hover{
+                transition: all 0.3s ease;
+                color: $secondary-color;
+            }
+        }
+    }
+    &__caption{
+        @include font(1.8rem, 700);
+    }
+    &__box{
+        @include flex(flex-start, space-between);
+    }
+    &__list{
+        padding-top: 4rem;
+        li{
+            cursor: pointer;
+            @include font(1.6rem);
+            padding-bottom: 1.3rem;
+            i{
+                font-size: 1rem;
+                color: $secondary-color;
+                transform: translateY(-2px);
+                padding-right: 0.5rem;
+            }
+            &:hover{
+                transition: all 0.3s ease-in;
+                color: $secondary-color;
+            }
+        }
+    }
+    &__contact{
+        ul{
+            padding-top: 2.5rem;
+        }
+        li{
+            @include font(1.6rem)
+        }
+    }
+    &__bot{
+        color: #fff;
+        width: 100%;
+        background-color: #021d3a;
+    }
+    &__copyright{
+        @include flex(center, space-between);
+        padding-bottom: 1rem;
+        ul{
+            padding-top: 2.5rem;
+            display: inline-flex;
+        }
+        li{
+            @include font(1.5rem);
+            padding: 0 1rem;
+            &:not(:last-child){
+                border-right: 1px solid #fff;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        &__copyright{
+            @include flex(center, center);
+            ul{
+                display: none;
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        &__icon{
+            padding-bottom: 2rem;
+        }
+        &__list{
+            padding-top: 1rem;
+        }
+        &__box{
+            margin-top: 2rem;
+        }
+    }
+}

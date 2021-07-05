@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Slide JS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+
+<body>
+    <main class="page">
+        <header class="header">
+            <!-- Header Top -->
+            <div class="header-top">
+                <div class="contact container-fluid">
+                    <ul class="contact__mail mb-0">
+                        <li class="contact__item">
+                            <i class="far fa-envelope"></i>
+                            <a href="#" class="text-decoration-none txt--hover">info@yoursite.com</a>
+                        </li>
+                        <li class="contact__item">
+                            <i class="fas fa-phone"></i>
+                            <a href="#" class="text-decoration-none txt--hover">123-456-7890</a>
+                        </li>
+                    </ul>
+                    <div class="contact__social">
+                        <span class="contact__follow">Follow Us :</span>
+                        <ul class="contact__icon mb-0">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                        <div class="contact__register">
+                            <a href="form.html" class="text-decoration-none">Login</a>
+                            <span>/</span>
+                            <a href="form.html" class="text-decoration-none">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header Navigation -->
+            <div class="header-sticky">
+                <nav class="header-menu container-fluid">
+                    <div class="header-menu__logo">
+                        <a href="index.html"><img src="images/header-logo.png" alt=""></a>
+                    </div>
+                    <div class="header-menu__right">
+                        <div class="header-menu__bars" onclick="hideBars()"><i class="fas fa-bars"></i></div>
+                        <ul class="header-menu__list mb-0">
+                            <li class="header-menu__item">
+                                <a class="text-decoration-none txt--hover" href="#">HOME
+                                    <i class="fas fa-chevron-down"></i>
+                                </a>
+                                <ul class="menu-child">
+                                    <li class="menu-child__item">
+                                        <a href="#">All Home Demos</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="text-decoration-none txt--hover" href="#">COURSES<i
+                                        class="fas fa-chevron-down"></i>
+                                </a>
+                                <ul class="menu-child">
+                                    <li class="menu-child__item">
+                                        <a href="#">Turtor Dashboard</a>
+                                    </li>
+                                    <li class="menu-child__item">
+                                        <a href="#">Student Registration</a>
+                                    </li>
+                                    <li class="menu-child__item">
+                                        <a href="#">Course Grid</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="text-decoration-none txt--hover" href="#">PAGES
+                                    <i class="fas fa-chevron-down"></i>
+                                </a>
+                                <ul class="menu-child">
+                                    <li class="menu-child__item">
+                                        <a href="#">Turtor Dashboard</a>
+                                    </li>
+                                    <li class="menu-child__item">
+                                        <a href="#">Student Registration</a>
+                                    </li>
+                                    <li class="menu-child__item">
+                                        <a href="#">Course Grid</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="text-decoration-none txt--hover" href="#">EVENTS<i
+                                        class="fas fa-chevron-down"></i></a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="text-decoration-none txt--hover" href="#">BLOG<i
+                                        class="fas fa-chevron-down"></i></a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="text-decoration-none txt--hover" href="#">SHOP<i
+                                        class="fas fa-chevron-down"></i></a>
+                            </li>
+                            <li class="header-menu__item"><a class="text-decoration-none txt--hover"
+                                    href="#">CONTACT</a>
+                            </li>
+                        </ul>
+                        <div class="header-menu__task">
+                            <ul class="header-menu__icon mb-0">
+                                <li class="modalSearch"><i class="fas fa-search"></i></li>
+                                <li><i class="fas fa-shopping-cart"></i></li>
+                            </ul>
+                            <div class="modal-search" style="display: none;">
+                                <div class="modal-search__exit"><i class="fas fa-times"></i></div>
+                                <div class="modal-search__form">
+                                    <input type="text" placeholder="Search here..">
+                                    <button><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="header-mobile d-none">
+                    <div class="container-fluid">
+                        <ul class="header-moblie__list">
+                            <li><a class="txt--hover" href="#">Home</a><i class="fas fa-plus"></i></li>
+                            <li><a class="txt--hover" href="#">Courses</a><i class="fas fa-plus"></i></li>
+                            <li><a class="txt--hover" href="#">Pages</a><i class="fas fa-plus"></i></li>
+                            <li><a class="txt--hover" href="#">Events</a><i class="fas fa-plus"></i></li>
+                            <li><a class="txt--hover" href="#">Blog</a><i class="fas fa-plus"></i></li>
+                            <li><a class="txt--hover" href="#">Shop</a><i class="fas fa-plus"></i></li>
+                            <li><a class="txt--hover" href="#">Contact</a><i class="fas fa-plus"></i></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- ==== Form ==== -->
+        <section class="banner">
+            <div class="container-fluid">
+                <h1 class="banner__heading">Student Registration</h1>
+                <p class="banner__dric">Home <span>/</span> Student Registration</p>
+            </div>
+        </section>
+        <section class="form">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 d-flex flex-column mb-5">
+                        <label for="firstName" class="font-weight-bold mb-4">First Name</label>
+                        <input type="text" placeholder="First Name" id="firstName">
+                        <div class="form__check" id="firstNameValidate"></div>
+                    </div>
+                    <div class="col-sm-6 d-flex flex-column mb-5">
+                        <label for="lastName" class="font-weight-bold mb-4">Last Name</label>
+                        <input type="text" placeholder="Last Name" id="lastName" tabindex="-1">
+                        <div  class="form__check" id="lastNameValidate"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 py-2 d-flex flex-column mb-5">
+                        <label for="userName" class="text-darkblue font-weight-bold">User Name</label>
+                        <input type="text" placeholder="User Name" id="userName" tabindex="-1">
+                        <div class="form__check" id="userNameValidate"></div>
+                    </div>
+                    <div class="col-sm-6 py-2 d-flex flex-column mb-5">
+                        <label for="email" class="text-darkblue font-weight-bold">E-Mail</label>
+                        <input type="email" placeholder="E-Mail" id="email" tabindex="-1">
+                        <div class="form__check" id="emailValidate"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 py-2 d-flex flex-column mb-5">
+                        <label for="password" class="text-darkblue font-weight-bold">Password</label>
+                        <input type="password" placeholder="Password" id="password" tabindex="-1">
+                        <div class="form__check" id="eaa"></div>
+                    </div>
+                    <div class="col-sm-6 py-2 d-flex flex-column mb-5">
+                        <label for="rePassword" class="text-darkblue font-weight-bold">Password confirmation</label>
+                        <input type="password" placeholder="Password Confirmation" id="rePassword" tabindex="-1">
+                        <div class="form__check" id="re"></div>
+                    </div>
+                </div>
+                <div class="row m-5">
+                    <div class="col-12 d-flex justify-content-end">
+                        <button id="btnSubmit" type="submit" class="box__btn"><a>Register</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==== Form ==== -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="footer__social col-lg-4 col-md-6">
+                            <div class="footer__logo">
+                                <img src="/images/white-logo.png" alt="">
+                            </div>
+                            <p class="footer__desc">
+                                Edubin perfect for online courses and other institutes. It’s a complete solution with
+                                lmsfeatures and functionalities.
+                            </p>
+                            <ul class="footer__icon">
+                                <li><i class="fab fa-facebook-f"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-youtube"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                            </ul>
+                        </div>
+                        <div class="footer__link col-lg-3 col-md-6">
+                            <h2 class="footer__caption">Feature Links</h2>
+                            <div class="footer__box">
+                                <ul class="footer__list">
+                                    <li><i class="fas fa-chevron-right"></i>About Us</li>
+                                    <li><i class="fas fa-chevron-right"></i>Graduation</li>
+                                    <li><i class="fas fa-chevron-right"></i>Scholarship</li>
+                                    <li><i class="fas fa-chevron-right"></i>Contact</li>
+                                    <li><i class="fas fa-chevron-right"></i>Result</li>
+                                </ul>
+                                <ul class="footer__list">
+                                    <li><i class="fas fa-chevron-right"></i>Admissions</li>
+                                    <li><i class="fas fa-chevron-right"></i>International</li>
+                                    <li><i class="fas fa-chevron-right"></i>Teachers</li>
+                                    <li><i class="fas fa-chevron-right"></i>Alumni</li>
+                                    <li><i class="fas fa-chevron-right"></i>Events</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__support col-lg-2 col-md-6">
+                            <h2 class="footer__caption">Support</h2>
+                            <ul class="footer__list">
+                                <li><i class="fas fa-chevron-right"></i>Language</li>
+                                <li><i class="fas fa-chevron-right"></i>WordPress</li>
+                                <li><i class="fas fa-chevron-right"></i>Privacy</li>
+                                <li><i class="fas fa-chevron-right"></i>FAQs</li>
+                                <li><i class="fas fa-chevron-right"></i>Support</li>
+                            </ul>
+                        </div>
+                        <div class="footer__contact col-lg-3 col-md-6">
+                            <h2 class="footer__caption">Contact Us</h2>
+                            <p class="footer__desc">203, Envato Labs, Behind Alis Steet, Melbourne, Australia.</p>
+                            <ul class="footer__">
+                                <li><i class="fas fa-phone-volume"></i> +1 23-4567-8920</li>
+                                <li><i class="far fa-envelope"></i> info@yourmail.com</li>
+                                <li><i class="fas fa-globe"></i> www.yourdomain.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bot">
+                <div class="container-fluid">
+                    <div class="footer__copyright container">
+                        <p class="footer__desc">© 2021 Pixelcurve. All rights reserved.</p>
+                        <ul>
+                            <li>Language</li>
+                            <li>WordPress</li>
+                            <li>Privacy</li>
+                            <li>FAQs</li>
+                            <li>Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ==== Back to Top ==== -->
+        <button class="back--top" type="button">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </main>
+</body>
+<script>
+
+</script>
+<!-- Script Bootstrap 4 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/register.js"></script>
+
+</html>

@@ -1,0 +1,83 @@
+.teacher {
+    position: relative;
+    .container-fluid {
+        padding: 10rem 2rem;
+        max-width: 100%;
+        width: 117rem;
+    }
+    &__box {
+        padding-bottom: 5rem;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+    &__row {
+        @include flex(flex-start, space-between);
+    }
+    &__col {
+        position: relative;
+        margin-bottom: 3rem;
+    }
+    &__avatar {
+        width: 27rem;
+        overflow: hidden;
+        position: relative;
+        border-radius: 0.5rem;
+    }
+    &__content {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        @include size(80%, 6.5rem);
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        &:hover {
+            transition: all 1s ease;
+            height: max-content;
+        }
+    }
+    &__name {
+        @include font(1.8rem, 700, $primary-color);
+        margin-top: 1.5rem;
+    }
+    &__degree {
+        @include font(1.5rem, 400, #8a8a8a);
+    }
+    &__social {
+        margin-bottom: 1.5rem;
+        a {
+            color: $primary-color;
+            font-size: 1.7rem;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+    }
+    .row {
+        margin-left: -12px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 1200px) {
+        &__row {
+            @include flex(center, space-evenly);
+        }
+    }
+    @media (max-width: 960px) {
+        &__right {
+            margin-top: 5rem;
+            @include flex(flex-start, space-evenly, wrap);
+        }
+    }
+    @media (max-width: 576px) {
+        &__row {
+            flex-wrap: wrap;
+        }
+    }
+}
